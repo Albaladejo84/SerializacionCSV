@@ -1,4 +1,3 @@
-
 public class Persona {
 	String nombre;
 	int edad;
@@ -16,6 +15,10 @@ public class Persona {
 
 	@Override
 	public String toString() {
+		return "Persona [nombre=" + nombre + ", edad=" + edad + ", email=" + email + "]";
+	}
+	
+	public String toString(String[] yaml) {
 		return "Persona [nombre=" + nombre + ", edad=" + edad + ", email=" + email + "]";
 	}
 
@@ -66,5 +69,16 @@ public class Persona {
 		setEdad(Integer.parseInt(campoStrings[1]));
 		this.email = campoStrings[2];
 	}
-
+	
+	public String[] exportarYAML() {
+		String[] resultado = {"nombre:" + nombre,  ", edad:" + edad, ", email:" + email};
+		return resultado;
+	}
+	
+	public void importarYAML(String[] PersonaYaml) {
+		PersonaYaml[0].split(":");
+		
+		
+	
+	}
 }

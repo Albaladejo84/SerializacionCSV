@@ -41,6 +41,9 @@ public class Principal {
 		persona3.cargarCsv(personaCsv2, ":");
 		System.out.println(persona3.exportarCsv());
 		System.out.println(persona3);
+		System.out.println("");
+		
+		System.out.println(persona.toString(persona.exportarYAML()));
 
 	}
 }
